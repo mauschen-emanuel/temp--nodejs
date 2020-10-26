@@ -132,3 +132,53 @@
     - HTTP-Header, `Location: <...>`
   - Falls Source nicht bekannt
     - HTTP-Statuscode `404`
+
+
+## TypeScript
+
+- JavaScript hat ein dynamisches Typsystem
+
+```javascript
+let x = 23;
+
+console.log(typeof x);
+// => 'number'
+
+x = 'Hallo';
+console.log(typeof x);
+// => 'string'
+```
+
+- JavaScript muss häufig auf uralt-Browsern laufen
+  - `const`, `let`, `() => {}`, …
+  - Laufen nicht im IE 11
+
+
+- Transpiler (übersetzen modernes JavaScript in altes JavaScript)
+  - CoffeeScript (Ruby-artiges JavaScript)
+  - Babel (von Facebook)
+
+
+- 2012: Microsoft
+  - Neue Sprache
+    - Transpiler => 100% kompatibel zu modernem JavaScript
+    - Statisches Typsystem
+  - TypeScript
+
+
+- Installation
+
+```shell
+$ npm install typescript --save-dev
+$ npm install ts-node --save-dev
+```
+
+- `npx tsc` führt den TypeScript-Compiler aus
+- `npx ts-node` führt Node.js mit TypeScript-Support aus
+
+
+- `@types`-Module
+  - Enthalten Typdefinitionen, damit TypeScript auch mit JavaScript-Modulen interagieren kann
+  - zB `@types/express`
+  - Nur erforderlich, wenn das Modul selbst keine Typunterstüzung mitbringt
+  - Immer so installieren, wie auch das eigentliche Modul installiert wird (`dependencies` vs `devDependencies`)

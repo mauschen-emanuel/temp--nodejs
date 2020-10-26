@@ -1,8 +1,5 @@
-'use strict';
-
-const http = require('http');
-
-const getApp = require('./getApp');
+import http from 'http';
+import { getApp } from './getApp';
 
 const app = getApp();
 const server = http.createServer(app);

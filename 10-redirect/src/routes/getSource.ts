@@ -1,10 +1,10 @@
-'use strict';
+import fs from 'fs';
+import path from 'path';
+import { RequestHandler } from 'express';
 
-const fs = require('fs');
-const path = require('path');
+const getSource: RequestHandler = function (req, res) {
+  const routesPath = path.join(__dirname, '..', 'routes.json');
 
-const getSource = (req, res) => {
-  const routesPath = path.join(__dirname, 'routes.json');
   fs.readFile(routesPath, 'utf8', (err, routesData) => {
     if (err) {
       res.status(500).end();
@@ -29,4 +29,4 @@ const getSource = (req, res) => {
   });
 };
 
-module.exports = getSource;
+export { getSource };
