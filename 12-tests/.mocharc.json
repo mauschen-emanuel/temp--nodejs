@@ -1,0 +1,7 @@
+{
+  "asyncOnly": true,
+  "bail": true,
+  "recursive": true,
+  "reporter": "spec",
+  "ui": "tdd"
+}

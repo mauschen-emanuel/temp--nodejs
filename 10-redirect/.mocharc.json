@@ -1,0 +1,7 @@
+{
+  "asyncOnly": true,
+  "bail": true,
+  "recursive": true,
+  "require": "ts-node/register",
+  "ui": "tdd"
+}

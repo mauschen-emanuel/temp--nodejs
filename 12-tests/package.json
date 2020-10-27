@@ -1,0 +1,13 @@
+{
+  "name": "my-tests",
+  "version": "0.1.0",
+  "devDependencies": {
+    "assertthat": "5.2.1",
+    "mocha": "8.2.0"
+  },
+  "scripts": {
+    "analyse": "echo Running ESLint...",
+    "pretest": "npm run analyse",
+    "test": "npx mocha"
+  }
+}

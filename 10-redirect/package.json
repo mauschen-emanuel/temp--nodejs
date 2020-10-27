@@ -6,11 +6,21 @@
     "express": "4.17.1"
   },
   "devDependencies": {
+    "@types/mocha": "8.0.3",
+    "@types/supertest": "2.0.10",
     "@typescript-eslint/eslint-plugin": "4.6.0",
     "@typescript-eslint/parser": "4.6.0",
+    "assertthat": "5.2.1",
     "eslint": "7.12.1",
     "eslint-config-es": "3.24.8",
+    "mocha": "8.2.0",
+    "supertest": "5.0.0",
     "ts-node": "9.0.0",
     "typescript": "4.0.3"
+  },
+  "scripts": {
+    "analyse": "npx eslint ./src/**/*.ts ./test/**/*.ts",
+    "pretest": "npm run analyse",
+    "test": "npx mocha ./test/**/*Tests.ts "
   }
 }

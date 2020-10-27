@@ -219,3 +219,48 @@ $ npm install ts-node --save-dev
   - Deprecated => Erweiterung für ESLint
 
 - Kurzfassung: Nehmt ESLint!
+
+
+
+## Testen
+
+```
+/
+  src/
+    add.js
+    subtract.js
+  test/
+    unit/
+      addTests.js
+      subtractTests.js
+    integration/
+      calculatorTests.js
+
+/
+  src/
+    calculator/
+      add.js
+      addTests.js
+      subtract.js
+      subtractTests.js
+    database/
+      calculatorDatabase.js
+  test/
+    calculatorTests.js
+```
+
+- Erster Ansatz
+  - Implementierung und Tests strikt getrennt
+  - Einfach zu packagen, weil man Tests einfach ignorieren kann
+  - Logisch zusammengehörige Dateien werden nicht im Dateisystem gemeinsam abgelegt
+- Zweiter Ansatz
+  - Verbindet Implementierung und Tests
+  - Logisch zusammengehörige Dateien gemeinsam im Dateisystem
+  - Implementierung und Tests sind durchmischt
+
+
+- Frameworks
+  - Jasmine (kommt ursprünglich aus dem Frontend, war ursprünglich nicht für Node gedacht)
+  - Mocha (speziell für Node entwickelt, war lange Jahre der De-Facto-Standard)
+  - Jest (würfelt Tests durcheinander, parallelisiert Tests)
+  - Ava, …
