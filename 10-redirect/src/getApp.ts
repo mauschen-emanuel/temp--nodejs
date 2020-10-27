@@ -1,10 +1,10 @@
-import { getSource } from './routes/getSource';
+import { redirect } from './routes/redirect';
 import express, { Application } from 'express';
 
 const getApp = function (): Application {
   const app = express();
 
-  app.get('/:source', getSource);
+  app.get('/:source', redirect);
 
   return app;
 };
