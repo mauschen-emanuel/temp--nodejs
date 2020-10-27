@@ -182,3 +182,40 @@ $ npm install ts-node --save-dev
   - zB `@types/express`
   - Nur erforderlich, wenn das Modul selbst keine Typunterstüzung mitbringt
   - Immer so installieren, wie auch das eigentliche Modul installiert wird (`dependencies` vs `devDependencies`)
+
+
+## Exports
+
+- Named Exports (mit `{}`)
+  - mehrfach
+  - Wert + Name werden exportiert
+  - Import muss den Namen aufgreifen
+- Default Exports (mit `default`-Schlüsselwort)
+  - einmal
+  - Wert exportiert
+  - Import kann einen beliebigen Namen frei wählen
+- Empfehlung
+  - Immer mit Named Exports
+  - Gründe
+    - Einheitlicher Stil
+    - Besseres Refactoring
+    - Konsistente Namensverwendung im ganzen Projekt
+
+
+## Linter
+
+- [JSLint](https://jslint.com/)
+  - Von Douglas Crockford
+  - Erster Linter, sehr beschränkt, unfreundlich
+- [JSHint](https://jshint.com/)
+  - Von der Community
+  - Umfangreicher, aber monolithisch
+- [ESLint](https://eslint.org/)
+  - Von Nicholas C. Zakas
+  - De-Facto-Standard, Plugin-basiert
+- [TSLint](https://palantir.github.io/tslint/)
+  - Von Palantir
+  - TypeScript-Linter, ähnlich wie ESLint
+  - Deprecated => Erweiterung für ESLint
+
+- Kurzfassung: Nehmt ESLint!
