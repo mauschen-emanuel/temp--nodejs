@@ -1,0 +1,4 @@
+[
+  { "source": "g", "target": "https://www.google.de" },
+  { "source": "s", "target": "https://www.spiegel.de" }
+]
